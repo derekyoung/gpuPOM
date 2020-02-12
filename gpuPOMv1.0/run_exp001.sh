@@ -148,7 +148,7 @@ fi
 homdir='/home/dyoung/gpuPOM/gpuPOMv1.0'
 
 #run directory (where we are running this simulation, usually a scratch disk):
-rundir="/home/dyoung/gpuPOM/gpuPOMv1.0/run"
+rundir=$homdir/run
 if [ ! -d $rundir ]; then
 	mkdir $rundir
 fi

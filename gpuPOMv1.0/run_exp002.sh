@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #This is the runscript for GPU_POM
 #Set up for idealized tests grid=-1 (standing wave) or grid=-2 (dam-break)
@@ -156,9 +156,8 @@ if [ $tide -eq 1 ]; then
 	tidedir=$inpdir'/in/tide'
 fi
 
-
 #home directory where batch*, make* pom.h & pom/*.f etc are:
-homdir='/home/pom_test/xsz/exp_final_test/exp00x_cuda_GMD_submit'
+homdir='/home/dyoung/gpuPOM/gpuPOMv1.0'
 
 #run directory (where we are running this simulation, usually a scratch disk):
 rundir=$homdir/run
