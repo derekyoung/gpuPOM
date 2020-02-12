@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #This is the runscript for GPU_POM
 #Set up for idealized tests grid=-1 (standing wave) or grid=-2 (dam-break)
@@ -145,10 +145,10 @@ fi
 
 
 #home directory where batch*, make* pom.h & pom/*.f etc are:
-homdir='/home/pom/mpi_pom/leo/tests/exp00x_cuda_debug'
+homdir='/home/dyoung/gpuPOM/gpuPOMv1.0'
 
 #run directory (where we are running this simulation, usually a scratch disk):
-rundir="/home/pom/mpi_pom/leo/tests/exp00x_cuda_debug/run"
+rundir="/home/dyoung/gpuPOM/gpuPOMv1.0/run"
 if [ ! -d $rundir ]; then
 	mkdir $rundir
 fi

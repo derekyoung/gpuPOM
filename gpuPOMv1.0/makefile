@@ -18,11 +18,11 @@ CLEAN = rm
 # Set libraries and include files
 # NETCDFINC = -I/autofs/na1_sw/eslogin/p-netcdf/1.1.1/cnl3.1.gnu/include  # yoyo
 # NETCDFLIB = -L/autofs/na1_sw/eslogin/p-netcdf/1.1.1/cnl3.1.gnu/lib
-NETCDFINC = -I/home/pom_test/software/include
-NETCDFLIB = -L/home/pom_test/software/lib
+NETCDFINC = -I/usr/local/Pnetcdf/include
+NETCDFLIB = -L/usr/local/Pnetcdf/lib
 #NETCDFINC = -I/home/pom_test/netcdf_ompi_compatible/include
 #NETCDFLIB = -L/home/pom_test/netcdf_ompi_compatible/lib
-FORTRANLIB = -L/home/pom_test/intel/composerxe/lib/intel64 -lifcore -lifport
+FORTRANLIB = -L/opt/intel/compilers_and_libraries/linux/lib/intel64 -lifcore -lifport
 
 #FFLAGS = -ip -O3 -lmpi  $(NETCDFINC)
 #FFLAGS = -check bounds -check format -lmpi  $(NETCDFINC)
@@ -33,7 +33,7 @@ CFLAGS = -O3 -fp-model precise  $(NETCDFINC)
 NVCFLAGS = -m64 -O3 \
 		   -lineinfo --ptxas-options=-v -keep\
 		   -gencode arch=compute_35,code=sm_35\
- 		   -I/home/pom_test/intel/impi/4.1.3.048/include64\
+		   -I /opt/intel/impi/2019.5.281/intel64/include\
 		   -DMPICH_IGNORE_CXX_SEEK\
 		   -DPURE_GPU_MPI \
 		   --fmad=false\
